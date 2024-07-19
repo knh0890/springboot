@@ -1,0 +1,19 @@
+package common;
+
+public class Student1 extends Person
+{
+	private String stNumber;
+
+	public Student1(String name, int age, String stNumber)
+	{
+		super(name, age);
+		this.stNumber = stNumber;
+	}
+	
+	
+	
+	public String toString()
+	{
+		return super.toString() + ", 학번:" + stNumber;
+	}
+}

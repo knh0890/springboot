@@ -1,0 +1,34 @@
+package prepared;
+
+import java.util.Scanner;
+
+import connect.IConnectImpl;
+
+public class InsertSQL extends IConnectImpl
+{
+	public InsertSQL() {
+		super(ORACLE_DRIVER, "skgus", "1234");
+	}
+	
+	public void execute() {
+		try
+		{
+			String query = "INSERT INTO member VALUES (?, ?, ?, ?)";
+			
+			psmt = con.prepareStatement(query);
+			
+			Scanner scan = new Scanner(System.in);
+			System.out.println("아이디:");
+			
+		} catch (Exception e)
+		{
+			
+		}
+	}
+
+	public static void main(String[] args)
+	{
+
+	}
+
+}

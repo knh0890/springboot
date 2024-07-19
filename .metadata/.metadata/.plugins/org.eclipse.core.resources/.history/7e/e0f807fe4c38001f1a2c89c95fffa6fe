@@ -1,0 +1,15 @@
+package ex17collection;
+
+
+import java.util.Scanner;
+
+public class QuArrayList
+{
+
+
+	public static void main(String[] args)
+	{
+		
+	}
+
+}

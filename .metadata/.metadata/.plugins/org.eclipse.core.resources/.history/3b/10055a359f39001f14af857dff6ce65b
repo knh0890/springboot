@@ -1,0 +1,40 @@
+class ShowThread extends Thread
+{
+	//멤버변수와 생성자 정의
+	String threadName;
+	public ShowThread(String name)
+	{
+		threadName = name;
+	}
+	public void run()
+	{
+		//10번 실행한다
+		for (int i = 1; i < 10; i++)
+		{
+			System.out.println("안녕하세요.["+threadName+"]입니다.");
+			try
+			{
+				sleep(10); //0.01초만큼 block 상태
+			} catch ( InterruptedException e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
+public class Ex01ThreadStart
+{
+	public static void main(String[] args)
+	{
+		//쓰레드 객체 생성
+		ShowThread st1 = new ShowThread("쓰레드1st");
+		ShowThread st2 = new ShowThread("Thread2nd");
+		
+//		st1.start();
+//		st2.start();
+//		
+		st1.run();
+		st2.run();
+	}
+}

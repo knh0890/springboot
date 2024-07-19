@@ -1,0 +1,41 @@
+package common;
+
+import java.util.Objects;
+
+public class Teacher extends Person
+{
+	private String subject;
+
+	public Teacher(String name, int age, String subject)
+	{
+		super(name, age);
+		this.subject = subject;
+	}
+	
+	public String toString()
+	{
+		return super.toString() + ", 과목:" + subject;
+	}
+	
+	public int hashCode() 
+	{
+		int returnCode1 = super.getAge() + this.subject.hashCode();
+		System.out.println("returnCode1" + returnCode1);
+		
+		int returnCode2 = Objects.hash(super.getAge(), this.subject);
+		return returnCode2;
+	}
+	
+	public boolean equals(Object obj)
+	{
+		Teacher teacher = (Teacher)obj;
+		if((teacher.getAge()==super.getAge()) && teacher.subject.equals(this.subject))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}

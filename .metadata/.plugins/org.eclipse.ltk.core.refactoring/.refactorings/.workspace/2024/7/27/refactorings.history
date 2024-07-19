@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Chapter27_JDBC&apos; to &apos;Chapter29_JDBC&apos;" description="Rename resource &apos;Chapter27_JDBC&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Chapter27_JDBC" name="Chapter29_JDBC" stamp="1720078308325" updateReferences="true"/>
+</session>
